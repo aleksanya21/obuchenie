@@ -1,0 +1,141 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: �Vision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ���� ���, sdf, LIC=8MZAR-KR8AP-49LG2-9RJF1-SF48E-WMIHC
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.25.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DARMCM1.DLL V1.19.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TARMCM1.DLL V1.14.0.0
+ 
+<h2>Project:</h2>
+G:\work\sdfsd\MDK-ARM\sdfsd.uvprojx
+Project File Date:  05/14/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'sdfsd'
+assembling startup_stm32f030x8.s...
+compiling main.c...
+../Inc/RV_BUTTON.h(9): error:  #20: identifier "bool" is undefined
+  	bool btn_state: 1;
+../Inc/RV_BUTTON.h(10): error:  #20: identifier "bool" is undefined
+  	bool btn_flag: 1;
+../Inc/RV_BUTTON.h(11): error:  #20: identifier "bool" is undefined
+  	bool hold_flag: 1;
+../Inc/RV_BUTTON.h(12): error:  #20: identifier "bool" is undefined
+  	bool counter_flag: 1;
+../Inc/RV_BUTTON.h(13): error:  #20: identifier "bool" is undefined
+  	bool isHolded_f: 1;
+../Inc/RV_BUTTON.h(14): error:  #20: identifier "bool" is undefined
+  	bool isRelease_f: 1;
+../Inc/RV_BUTTON.h(15): error:  #20: identifier "bool" is undefined
+  	bool isPress_f: 1;
+../Inc/RV_BUTTON.h(16): error:  #20: identifier "bool" is undefined
+  	bool step_flag: 1;
+../Inc/RV_BUTTON.h(17): error:  #20: identifier "bool" is undefined
+  	bool oneClick_f: 1;
+../Inc/RV_BUTTON.h(18): error:  #20: identifier "bool" is undefined
+  	bool isOne_f: 1;
+../Inc/RV_BUTTON.h(22): error:  #20: identifier "class" is undefined
+  class RV_BUTTON {
+../Inc/RV_BUTTON.h(22): error:  #65: expected a ";"
+  class RV_BUTTON {
+../Inc/RV_BUTTON.h(43): warning:  #12-D: parsing restarts here after previous syntax error
+  		bool isSingle();//возвращает true при одиночном клике. Сбрасывается после вызова
+../Inc/RV_BUTTON.h(44): error:  #20: identifier "bool" is undefined
+  		bool isDouble();//возвращает true при двойном клике. Сбрасывается после вызова
+../Inc/RV_BUTTON.h(44): warning:  #1295-D: Deprecated declaration isDouble - give arg types
+  		bool isDouble();//возвращает true при двойном клике. Сбрасывается после вызова
+../Inc/RV_BUTTON.h(45): error:  #20: identifier "bool" is undefined
+  		bool isTriple();//возвращает true при тройном клике. Сбрасывается после вызова
+../Inc/RV_BUTTON.h(45): warning:  #1295-D: Deprecated declaration isTriple - give arg types
+  		bool isTriple();//возвращает true при тройном клике. Сбрасывается после вызова
+../Inc/RV_BUTTON.h(47): error:  #20: identifier "bool" is undefined
+  		bool hasClicks();//проверка на наличие кликов. Сбрасывается после вызова
+../Inc/RV_BUTTON.h(47): warning:  #1295-D: Deprecated declaration hasClicks - give arg types
+  		bool hasClicks();//проверка на наличие кликов. Сбрасывается после вызова
+../Inc/RV_BUTTON.h(48): warning:  #1295-D: Deprecated declaration getClicks - give arg types
+  		uint8_t getClicks();//возвращает количество кликов
+../Inc/RV_BUTTON.h(50): error:  #20: identifier "bool" is undefined
+  		bool isStep();//возвращает true по таймеру setStepTimeout
+../Inc/RV_BUTTON.h(50): warning:  #1295-D: Deprecated declaration isStep - give arg types
+  		bool isStep();//возвращает true по таймеру setStepTimeout
+../Inc/RV_BUTTON.h(52): error:  #77-D: this declaration has no storage class or type specifier
+    private:
+../Inc/RV_BUTTON.h(52): error:  #65: expected a ";"
+    private:
+../Inc/RV_BUTTON.h(62): error:  #20: identifier "bool" is undefined
+  		bool _inv_state;
+../Inc/RV_BUTTON.h(63): error:  #20: identifier "bool" is undefined
+  		bool _mode;
+../Inc/RV_BUTTON.h(64): error:  #20: identifier "bool" is undefined
+  		bool _type;
+../Inc/RV_BUTTON.h(65): error:  #169: expected a declaration
+  };
+../Src/main.c(114): error:  #65: expected a ";"
+  	RV_BUTTON button(button_GPIO_Port, button_Pin, LOW_PULL, NORM_OPEN);
+../Src/main.c(124): error:  #20: identifier "button" is undefined
+  		button.tick();
+../Src/main.c: 6 warnings, 24 errors
+compiling RV_BUTTON.cpp...
+compiling stm32f0xx_it.c...
+compiling stm32f0xx_hal_msp.c...
+compiling stm32f0xx_hal_tim.c...
+compiling stm32f0xx_hal_tim_ex.c...
+compiling stm32f0xx_hal_uart_ex.c...
+compiling stm32f0xx_hal_rcc.c...
+compiling stm32f0xx_hal_uart.c...
+compiling stm32f0xx_hal_rcc_ex.c...
+compiling stm32f0xx_hal.c...
+compiling stm32f0xx_hal_i2c_ex.c...
+compiling stm32f0xx_hal_gpio.c...
+compiling stm32f0xx_hal_i2c.c...
+compiling stm32f0xx_hal_dma.c...
+compiling stm32f0xx_hal_cortex.c...
+compiling stm32f0xx_hal_pwr.c...
+compiling stm32f0xx_hal_pwr_ex.c...
+compiling stm32f0xx_hal_flash.c...
+compiling stm32f0xx_hal_flash_ex.c...
+compiling stm32f0xx_hal_exti.c...
+compiling system_stm32f0xx.c...
+"sdfsd\sdfsd.axf" - 24 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.3.0.pack
+                ARM.CMSIS.5.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F0xx_DFP.2.0.0.pack
+                Keil.STM32F0xx_DFP.2.0.0
+                STMicroelectronics STM32F0 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_sdfsd
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.1
+Target not created.
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
